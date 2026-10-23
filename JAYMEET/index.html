@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JAYMEET 傑遇顧問｜讓好機會，遇見對的人</title>
+<meta name="description" content="專業人才媒合，探索行政、電商、品牌企劃、數位協作等多元職涯機會。求職者零媒合費。" />
+<meta property="og:title" content="JAYMEET 傑遇顧問｜讓好機會，遇見對的人" />
+<meta property="og:description" content="你的能力，值得更多選擇！透過官方 LINE 了解職缺與媒合流程。" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap"
+/>
+<style>
+  :root {
+    --gold: oklch(0.79 0.13 85);
+    --gold-light: oklch(0.9 0.09 92);
+    --gold-deep: oklch(0.62 0.12 70);
+    --ink: oklch(0.19 0.018 62);
+    --ink-soft: oklch(0.26 0.022 62);
+    --cream: oklch(0.98 0.012 85);
+    --background: var(--cream);
+    --foreground: oklch(0.25 0.02 62);
+    --card: oklch(0.995 0.006 85);
+    --primary-foreground: oklch(0.96 0.02 85);
+    --muted: oklch(0.48 0.025 62);
+    --border: oklch(0.86 0.03 82);
+    --sep: oklch(0.79 0.13 85 / 0.22);
+    --font-display: "Noto Serif TC", "Songti TC", serif;
+    --font-sans: "Noto Sans TC", "PingFang TC", sans-serif;
+    --font-latin: "Cormorant Garamond", Georgia, serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--gold); color: var(--ink); }
+
+  h1, h2, h3 { font-family: var(--font-display); margin: 0; }
+  p { margin: 0; }
+  a { color: inherit; }
+
+  .wrap { margin-inline: auto; max-width: 64rem; }
+  .wrap-narrow { margin-inline: auto; max-width: 48rem; }
+
+  /* ---------- gold pieces ---------- */
+  .gold-text {
+    background-image: linear-gradient(
+      118deg,
+      var(--gold-deep) 0%,
+      var(--gold-light) 36%,
+      var(--gold) 60%,
+      var(--gold-deep) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gold-text-deep {
+    background-image: linear-gradient(
+      118deg,
+      color-mix(in oklab, var(--gold-deep) 76%, var(--ink)) 0%,
+      var(--gold-deep) 42%,
+      color-mix(in oklab, var(--gold) 78%, var(--gold-deep)) 68%,
+      color-mix(in oklab, var(--gold-deep) 76%, var(--ink)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gold-rule {
+    display: inline-block;
+    height: 1px;
+    border: 0;
+    background-image: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .gold-dot {
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 9999px;
+    background-image: linear-gradient(140deg, var(--gold-light), var(--gold-deep));
+    flex: none;
+  }
+
+  .gold-frame { position: relative; isolation: isolate; }
+  .gold-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background-image: linear-gradient(
+      140deg,
+      var(--gold-light),
+      var(--gold) 32%,
+      var(--gold-deep) 62%,
+      var(--gold-light)
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .gold-glow { box-shadow: 0 34px 70px -34px color-mix(in oklab, var(--gold) 55%, transparent); }
+
+  .ink-panel {
+    background-color: var(--ink);
+    background-image:
+      radial-gradient(65% 52% at 50% -6%, color-mix(in oklab, var(--gold) 26%, transparent), transparent 70%),
+      radial-gradient(42% 42% at 88% 100%, color-mix(in oklab, var(--gold) 15%, transparent), transparent 70%),
+      radial-gradient(34% 34% at 6% 82%, color-mix(in oklab, var(--gold) 11%, transparent), transparent 70%);
+    color: var(--primary-foreground);
+  }
+
+  .grain { position: relative; }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+    z-index: 0;
+  }
+
+  .btn-gold {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    background-image: linear-gradient(
+      135deg,
+      var(--gold-deep) 0%,
+      var(--gold) 26%,
+      var(--gold-light) 50%,
+      var(--gold) 74%,
+      var(--gold-deep) 100%
+    );
+    color: var(--ink);
+    box-shadow:
+      inset 0 1px 0 oklch(1 0 0 / 0.45),
+      0 18px 40px -18px color-mix(in oklab, var(--gold) 78%, transparent);
+    transition: transform 0.3s ease;
+  }
+  .btn-gold::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(105deg, transparent 42%, oklch(1 0 0 / 0.62) 50%, transparent 58%);
+    transform: translateX(-130%);
+    transition: transform 0.75s ease;
+  }
+  .btn-gold:hover { transform: translateY(-2px); }
+  .btn-gold:hover::after { transform: translateX(130%); }
+  .btn-gold .arrow { display: inline-block; transition: transform 0.3s ease; }
+  .btn-gold:hover .arrow { transform: translateX(4px); }
+
+  /* ---------- monogram ---------- */
+  .monogram {
+    position: relative;
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    transform: rotate(45deg);
+    background: var(--ink);
+  }
+  .monogram span {
+    display: block;
+    transform: rotate(-45deg);
+    font-family: var(--font-latin);
+    font-size: 1.875rem;
+    font-weight: 600;
+  }
+
+  /* ---------- header ---------- */
+  .brand { display: flex; align-items: center; gap: 1rem; }
+  .brand-name {
+    font-family: var(--font-latin);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+  }
+  .brand-sub {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--primary-foreground);
+  }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 2.5rem 1.5rem 6rem; overflow: hidden; }
+  .hero-inner { position: relative; z-index: 10; max-width: 48rem; margin-inline: auto; }
+  .eyebrow-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .eyebrow-row .rule-a { width: 4rem; }
+  .eyebrow-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+  }
+  .hero h1 {
+    margin-top: 2rem;
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .hero-lead {
+    margin-top: 1.75rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: center;
+  }
+  .hero-copy {
+    margin: 1.25rem auto 0;
+    max-width: 36rem;
+    text-align: center;
+    color: color-mix(in oklab, var(--primary-foreground) 80%, transparent);
+  }
+  .hero-cta {
+    margin-top: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .hero-note {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: color-mix(in oklab, var(--primary-foreground) 55%, transparent);
+    text-align: center;
+  }
+
+  /* ---------- facts ---------- */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-bottom: 1px solid color-mix(in oklab, var(--gold) 25%, transparent);
+    background: var(--card);
+    max-width: 64rem;
+    margin-inline: auto;
+  }
+  .fact {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    border-inline-start: 1px solid var(--sep);
+    border-block-end: 1px solid var(--sep);
+  }
+  .fact:nth-child(2n + 1) { border-inline-start: 0; }
+  .fact:nth-last-child(-n + 2) { border-block-end: 0; }
+  .fact-big {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  .fact-small { margin-top: 0.25rem; font-size: 0.75rem; color: var(--muted); }
+
+  /* ---------- sections ---------- */
+  .section { padding: 5rem 1.5rem; }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .eyebrow span.txt {
+    font-family: var(--font-latin);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: var(--gold-deep);
+    white-space: nowrap;
+  }
+  .eyebrow .rule { width: 3rem; }
+  .section h2 {
+    margin-top: 1.25rem;
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+  .section-lead {
+    margin: 1rem auto 0;
+    max-width: 32rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  /* ---------- job cards ---------- */
+  .jobs {
+    margin-top: 3rem;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+  .job {
+    border-radius: 0.75rem;
+    background: var(--card);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  .job:hover { transform: translateY(-6px); }
+  .job-top { display: flex; align-items: baseline; justify-content: space-between; }
+  .job-no { font-family: var(--font-latin); font-size: 1.5rem; font-weight: 600; color: var(--gold-deep); }
+  .job-icon { font-size: 1.875rem; transition: transform 0.3s ease; }
+  .job:hover .job-icon { transform: scale(1.1); }
+  .job .gold-rule { display: block; width: 100%; margin-top: 1rem; }
+  .job h3 { margin-top: 1rem; font-size: 1.125rem; font-weight: 900; color: var(--gold-deep); }
+  .job p { margin-top: 0.375rem; font-size: 0.875rem; color: var(--muted); }
+
+  /* ---------- reasons ---------- */
+  .reasons { margin-top: 3rem; display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  .reason {
+    display: flex;
+    gap: 1rem;
+    border-radius: 0.75rem;
+    background: var(--ink-soft);
+    padding: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  .reason:hover { background: var(--ink); }
+  .reason-mark {
+    position: relative;
+    isolation: isolate;
+    flex: none;
+    display: flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    transform: rotate(45deg);
+    margin-top: 0.125rem;
+  }
+  .reason-mark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background-image: linear-gradient(140deg, var(--gold-light), var(--gold) 32%, var(--gold-deep) 62%, var(--gold-light));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .reason-mark span { transform: rotate(-45deg); font-size: 0.875rem; font-weight: 900; color: var(--gold); }
+  .reason h3 { font-size: 1rem; font-weight: 900; color: var(--gold); }
+  .reason p { margin-top: 0.25rem; font-size: 0.875rem; color: color-mix(in oklab, var(--primary-foreground) 70%, transparent); }
+
+  /* ---------- closing ---------- */
+  .closing {
+    border-radius: 1rem;
+    background: var(--card);
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+  }
+  .closing .monogram { margin-inline: auto; background: var(--card); }
+  .closing h2 { margin-top: 2rem; font-size: 1.5rem; font-weight: 900; }
+  .closing-lead {
+    margin-top: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--foreground);
+  }
+  .closing-copy {
+    margin: 1rem auto 0;
+    max-width: 36rem;
+    color: var(--muted);
+  }
+  .closing-cta { margin-top: 2.25rem; display: flex; justify-content: center; }
+
+  /* ---------- footer ---------- */
+  .footer { padding: 3rem 1.5rem; text-align: center; overflow: hidden; }
+  .footer-inner { position: relative; z-index: 10; max-width: 42rem; margin-inline: auto; }
+  .footer-title { font-family: var(--font-display); font-size: 1.125rem; font-weight: 900; color: var(--gold); }
+  .footer .gold-rule { display: block; width: 8rem; margin: 1rem auto 0; }
+  .footer-tag {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.25em;
+    color: color-mix(in oklab, var(--primary-foreground) 75%, transparent);
+  }
+  .footer-fine { margin-top: 1.25rem; font-size: 0.75rem; color: color-mix(in oklab, var(--primary-foreground) 45%, transparent); }
+
+  /* ---------- responsive ---------- */
+  @media (min-width: 640px) {
+    .jobs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 768px) {
+    .hero h1 br { display: none; }
+    .eyebrow .rule { width: 5rem; }
+    .eyebrow-row .rule-a { width: 6rem; }
+    .hero h1 { font-size: 3.75rem; }
+    .hero-lead { font-size: 1.5rem; }
+    .section { padding: 7rem 1.5rem; }
+    .section h2 { font-size: 2.25rem; }
+    .fact-big { font-size: 1.875rem; }
+    .fact-small { font-size: 0.875rem; }
+    .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .fact { border-block-end: 0; }
+    .fact:nth-child(2n + 1) { border-inline-start: 1px; }
+    .fact:first-child { border-inline-start: 0; }
+    .fact:nth-last-child(-n + 2) { border-block-end: 0; }
+    .btn-gold { font-size: 1.125rem; }
+    .closing { padding: 3.5rem 3.5rem; }
+    .closing h2 { font-size: 2.25rem; }
+  }
+  @media (min-width: 1024px) {
+    .jobs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <!-- HERO -->
+  <section class="hero ink-panel grain">
+    <div class="hero-inner">
+      <div class="brand">
+        <span class="monogram gold-frame gold-glow"><span class="gold-text">J</span></span>
+        <div>
+          <p class="brand-name">JAYMEET</p>
+          <p class="brand-sub">傑遇顧問</p>
+        </div>
+      </div>
+
+      <div class="eyebrow-row">
+        <span class="gold-rule rule-a" aria-hidden="true"></span>
+        <span class="gold-dot" aria-hidden="true"></span>
+        <span class="eyebrow-label">專業媒合・多元選擇</span>
+        <span class="gold-dot" aria-hidden="true"></span>
+        <span class="gold-rule rule-a" aria-hidden="true"></span>
+      </div>
+
+      <h1>讓好機會，<br />
+        <span class="gold-text">遇見對的人</span>。</h1>
+
+      <p class="hero-lead">你的能力，值得更多選擇！</p>
+      <p class="hero-copy">無論你正在尋找新的職涯方向，或希望利用空閒時間增加收入，JAYMEET 陪你探索更多可能。</p>
+
+      <div class="hero-cta">
+        <a class="btn-gold" href="https://page.line.biz/account/@403blkea" target="_blank" rel="noopener noreferrer">
+          探索職涯機會 <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="hero-note">求職者零媒合費・服務費用由委託企業負擔</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section>
+    <div class="facts">
+      <div class="fact">
+        <p class="fact-big gold-text-deep">零</p>
+        <p class="fact-small">求職者媒合費</p>
+      </div>
+      <div class="fact">
+        <p class="fact-big gold-text-deep">4</p>
+        <p class="fact-small">職涯服務領域</p>
+      </div>
+      <div class="fact">
+        <p class="fact-big gold-text-deep">遠端</p>
+        <p class="fact-small">部分職務可彈性安排</p>
+      </div>
+      <div class="fact">
+        <p class="fact-big gold-text-deep">專人</p>
+        <p class="fact-small">諮詢與條件確認</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOBS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="eyebrow">
+        <span class="gold-rule rule" aria-hidden="true"></span>
+        <span class="txt">Opportunities</span>
+        <span class="gold-rule rule" aria-hidden="true"></span>
+      </div>
+      <h2><span class="gold-text-deep">✦</span> 探索多元職涯機會</h2>
+      <p class="section-lead">從文書行政到數位協作，每一種能力都有適合的落點。</p>
+
+      <div class="jobs">
+        <div class="job gold-frame">
+          <div class="job-top"><span class="job-no">01</span><span class="job-icon">📋</span></div>
+          <span class="gold-rule" aria-hidden="true"></span>
+          <h3>行政文書</h3>
+          <p>資料建檔、資訊整理</p>
+        </div>
+        <div class="job gold-frame">
+          <div class="job-top"><span class="job-no">02</span><span class="job-icon">🛍️</span></div>
+          <span class="gold-rule" aria-hidden="true"></span>
+          <h3>電商營運</h3>
+          <p>訂單協作、商品管理</p>
+        </div>
+        <div class="job gold-frame">
+          <div class="job-top"><span class="job-no">03</span><span class="job-icon">📱</span></div>
+          <span class="gold-rule" aria-hidden="true"></span>
+          <h3>品牌企劃</h3>
+          <p>社群內容、企劃支援</p>
+        </div>
+        <div class="job gold-frame">
+          <div class="job-top"><span class="job-no">04</span><span class="job-icon">💻</span></div>
+          <span class="gold-rule" aria-hidden="true"></span>
+          <h3>數位協作</h3>
+          <p>平台維護、流程管理</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REASONS -->
+  <section class="section ink-panel grain">
+    <div class="wrap-narrow" style="position:relative;z-index:10">
+      <div class="eyebrow">
+        <span class="gold-rule rule" aria-hidden="true"></span>
+        <span class="txt" style="color:var(--gold)">Why JAYMEET</span>
+        <span class="gold-rule rule" aria-hidden="true"></span>
+      </div>
+      <h2>為什麼選擇 <span class="gold-text">JAYMEET</span>？</h2>
+
+      <div class="reasons">
+        <div class="reason gold-frame">
+          <span class="reason-mark"><span aria-hidden="true">✓</span></span>
+          <div>
+            <h3>專業人才媒合</h3>
+            <p>依個人需求探索適合職缺</p>
+          </div>
+        </div>
+        <div class="reason gold-frame">
+          <span class="reason-mark"><span aria-hidden="true">✓</span></span>
+          <div>
+            <h3>多元工作形式</h3>
+            <p>部分提供遠端及彈性安排</p>
+          </div>
+        </div>
+        <div class="reason gold-frame">
+          <span class="reason-mark"><span aria-hidden="true">✓</span></span>
+          <div>
+            <h3>專人諮詢協助</h3>
+            <p>了解職務內容與合作條件</p>
+          </div>
+        </div>
+        <div class="reason gold-frame">
+          <span class="reason-mark"><span aria-hidden="true">✓</span></span>
+          <div>
+            <h3>求職者零媒合費</h3>
+            <p>服務費用由委託企業負擔</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="closing gold-frame gold-glow">
+        <span class="monogram gold-frame gold-glow"><span class="gold-text">J</span></span>
+        <h2>你的下一個機會，<span class="gold-text-deep">從這裡開始</span></h2>
+        <p class="closing-lead">不必急著決定未來，先了解自己有哪些選擇。</p>
+        <p class="closing-copy">透過 JAYMEET 官方 LINE，了解職缺資訊與媒合流程，讓專人協助你找到適合的方向。</p>
+        <div class="closing-cta">
+          <a class="btn-gold" href="https://page.line.biz/account/@403blkea" target="_blank" rel="noopener noreferrer">
+            探索職涯機會 <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer ink-panel grain">
+    <div class="footer-inner">
+      <p class="footer-title">JAYMEET 傑遇顧問有限公司</p>
+      <span class="gold-rule" aria-hidden="true"></span>
+      <p class="footer-tag">專業媒合・多元選擇・職涯同行</p>
+      <p class="footer-fine">實際職缺、工作安排及待遇以合作企業確認資訊為準。</p>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
